@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
-import "package:flutter_ozoo/screens/login.dart";
-import "package:flutter_ozoo/screens/signup.dart";
-import "package:flutter_ozoo/screens/welcome.dart";
+
+import "package:flutter_ozoo/Pages/Home.dart";
+
 void main(List<String> args) {
   runApp(const App());
 }
@@ -12,12 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp( 
       debugShowCheckedModeBanner: false,
-      initialRoute: "/",
-      routes: {
-        "/" : (context) => const Welcome(),
-        "/login" : (context) => const Login(),
-        "/signup" : (context) => const Signup(),
-      },
-    );
+      home: Home(),
+    );  
   }
 }
